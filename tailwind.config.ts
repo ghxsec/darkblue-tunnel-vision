@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				vpn: {
+					blue: '#1EAEDB',
+					'dark-blue': '#1A1F2C',
+					'darker-blue': '#141824',
+					'light-blue': '#33C3F0',
+					accent: '#5465FF',
+					success: '#4CAF50',
+					warning: '#FFC107',
+					error: '#FF5252',
+					'text-primary': '#FFFFFF',
+					'text-secondary': '#A3AED0'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,12 +97,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				ripple: {
+					'0%': { transform: 'scale(0.8)', opacity: '1' },
+					'100%': { transform: 'scale(2)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse 3s infinite',
+				'ripple': 'ripple 1.5s infinite ease-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+				'vpn-gradient': 'linear-gradient(to bottom right, #1A1F2C, #141824)',
+				'card-gradient': 'linear-gradient(to right, rgba(30, 174, 219, 0.05), rgba(26, 31, 44, 0.1))'
+			},
+			boxShadow: {
+				'glow-blue': '0 0 15px rgba(30, 174, 219, 0.5)',
+				'card': '0 4px 20px 0 rgba(0, 0, 0, 0.05)'
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
